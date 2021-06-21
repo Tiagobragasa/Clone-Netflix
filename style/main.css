@@ -1,0 +1,112 @@
+:root{ /*Declarando Variaveis no CSS3*/
+    --vermelho:#E50914;
+    --preta:#141414;
+}
+
+*{ /*Resetando o CSS, para aumentar a compatibilidade com os navegadores*/
+    margin: 0; /*zerando a borda do margin(margem) e a padding(preenchimento)*/
+    padding: 0;
+    box-sizing: border-box; /* o limite de vai ser sempre a borda da caixa*/
+}
+/*Ao se referir a uma tag, basta colocar o nome da tag puro, 
+se for me referenciar a uma classe acrescento um ponto antes ex:.container*/
+
+/*Faça uma referencia visual do projeto antes de começar a fazer, 
+para fazer de forma gradual e não ficar chutando os elementos*/
+
+/*elementos base*/
+body{
+    background-color: var(--preta); /*Aplicando cores com Variavel*/
+    font-family: 'Arial', Times, serif; /*Aplicando fontes*/
+    color:white;
+}
+
+header .container{
+   display:flex; /*flexbox (Maneira de alinhar elementos em tela) por padrão configura em linha*/
+   align-items: center; /*Alinhando elementos ao centro*/
+   justify-content: space-between; /*Distancia entre os elementos entre h2 e nav*/
+}
+
+header .logo{
+    margin-left: 5px; /*Afastando um pouco o logo da esquerda*/
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times; /*Aplicado Arial Black e Times caso não haja a fonte no navegador do usuario*/
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none; /*Retirando o underline dos links*/
+    color: #aaa;
+    margin-right: 10px; /*Dando margiem aos links para não ficarem grudados*/
+
+}
+
+header nav a:hover{ /* hover(flutar) quando passar o mouse ativa algum efeito*/
+    color: #fff;
+}
+
+/*filme principal*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/capa-witcher.jpg');
+    /*Gradiente de cor no banner*/
+    height: 400px;
+    background-size: cover; /*Imagem dentro da caixa*/
+
+    display: flex;
+    flex-direction: column; /*Alinhando items verticalmente*/
+    justify-content: center;
+    align-items: flex-start; /*Elementos partindo da esquerda*/
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;/*lida com o espaço interno do elementor (preenchimento)*/
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .3s ease all; /*transição do botão do preto pro branco*/
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+/*wrapper = envelopar, movimentar todos os elementos juntos e editar todos juntos*/
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
